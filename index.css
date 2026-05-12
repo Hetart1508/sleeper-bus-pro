@@ -1,0 +1,14 @@
+/* Theme entrypoint expected by index.html */
+
+/* Base */
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme imports live in TS to work with Vite bundling. */
+

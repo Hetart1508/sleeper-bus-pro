@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import BookingFlow from './pages/BookingFlow';
+import BookingFlowStepper from './pages/BookingFlowStepper';
 import Schedule from './pages/Schedule';
 //Hello github desktop
+
+
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'booking' | 'schedule'>('booking');
   const [user, setUser] = useState<string | null>(null);
@@ -85,10 +88,11 @@ const App: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 py-8 flex-grow">
         {activeTab === 'booking' ? (
-          <BookingFlow updateHeader={() => {}} currentUser={user} />
+          <BookingFlowStepper currentUser={user} />
         ) : (
           <Schedule onSelectBus={() => setActiveTab('booking')} />
         )}
+
       </main>
 
       <footer className="bg-white border-t border-slate-200 py-6">
